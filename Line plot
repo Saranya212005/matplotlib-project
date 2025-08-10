@@ -1,0 +1,13 @@
+import matplotlib.pyplot as plt
+import numpy as np
+x=[1,2,3,4,5]
+y=[10,20,30,40,50]
+plt.figure(figsize=(10,6),dpi=74)
+plt.plot(x,y,color='red',ls='--',lw=2,marker='o',markerfacecolor='yellow',markersize=8,markeredgecolor='black')
+plt.title("Line Plot Referal",fontsize=16,fontweight='bold',color='green',ha='right',va='top')
+plt.xlabel("Years of working",fontsize=12,color='violet')
+plt.ylabel("Profit in Minutes",fontsize=12,color='violet')
+plt.gca().set_facecolor('skyblue')
+plt.gcf().set_facecolor('lightblue')
+plt.grid(True,linestyle='--',lw=2,alpha=0.4)
+plt.show()
