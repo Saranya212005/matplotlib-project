@@ -1,0 +1,13 @@
+students=['A','B',"c",'D','E']
+marks=[79,74,78,98,90]
+colors=['skyblue','royalblue','darkblue','lightblue','blue']
+bars=plt.bar(students,marks,color=colors,width=0.5,lw=0.8,edgecolor='black',align='center',hatch='//')
+for bar in bars:
+    height=bar.get_height()
+    plt.text(bar.get_x()+bar.get_width()/2,height+0.5,str(height),ha='center',fontsize=10)
+plt.title("Performance bar chart")
+plt.xlabel("students")
+plt.ylabel("Marks/100")
+plt.grid(ls=':',lw=0.8)
+plt.gca().set_facecolor('powderblue')
+plt.show()
