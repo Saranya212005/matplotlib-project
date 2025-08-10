@@ -1,0 +1,29 @@
+import matplotlib.pyplot as plt
+import numpy as np
+x=np.linspace(1,10,100)
+plt.figure(figsize=(10,3),dpi=150)
+plt.subplot(1,6,1)
+plt.title("1st")
+plt.plot(np.sin(x),label='sin(x)',color='blue')
+
+plt.subplot(1,6,2)
+plt.title("2nd")
+plt.plot(np.cos(x),label='cos(x)',color='green')
+
+plt.subplot(1,6,3)
+plt.title("3rd")
+plt.plot(np.tan(x),label='tan(x)',color='red')
+
+plt.subplot(1,6,4)
+plt.title("4th")
+plt.plot(1/np.tan(x),label='cot(x)',color='orange')
+
+plt.subplot(1,6,5)
+plt.title("5th")
+plt.plot(1/np.cos(x),label='sec(x)',color='yellow')
+
+plt.subplot(1,6,6)
+plt.title("6th")
+plt.plot(1/np.sin(x),label='cosec(x)',color='violet')
+plt.tight_layout()
+plt.show()
