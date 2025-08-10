@@ -1,0 +1,8 @@
+students=['A','B',"c",'D','E']
+marks=[79,74,78,98,90]
+colors=['skyblue','royalblue','darkblue','lightblue','blue']
+plt.bar(students,marks,color=colors,width=0.5,linewidth=0.8,edgecolor='black')
+plt.title("Performance bar chart")
+plt.xlabel("students")
+plt.ylabel("Marks/100")
+plt.show()
