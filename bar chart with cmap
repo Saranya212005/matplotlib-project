@@ -1,0 +1,21 @@
+import matplotlib.pyplot as plt
+import matplotlib.cm as cm
+import matplotlib.colorbar as colorbar
+import matplotlib.colors as mcolors
+import numpy as np
+students=['d','e','f','g','x','y','z','a','b','c']
+marks=[10,11,12,13,14,15,16,17,18,19]
+norm=mcolors.Normalize(vmin=min(marks),vmax=max(marks))
+cmap=cm.plasma
+colors=cmap(norm(marks))
+fig,ax=plt.subplots()
+bars=ax.bar(students,marks,color=colors,edgecolor='black')
+sm=cm.ScalarMappable(cmap=cmap,norm=norm)
+sm.set_array([])
+cbar=plt.colorbar(sm,ax=ax)
+cbar.set_label('Marks')
+ax.set_title('Bar chart with viridis')
+ax.set_xlabel('Students')
+ax.set_ylabel('Marks')
+plt.tight_layout()
+plt.show()
